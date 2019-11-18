@@ -1,9 +1,9 @@
 Em xin phép update lại sau
 Đề tài: quản lý thi trắc nghiệm
 1. Thành viên
-B16DCCN034	Trần Đức Chuyên	chuyentran282@gmail.com
-B16DCCB274	Nguyễn Thị Phương	nguyenphuong27798@gmail.com
-B16DCCN151	Lê Thị Hoa	Lehoa98ptit@gmail.com
+	B16DCCN034	Trần Đức Chuyên	chuyentran282@gmail.com
+	B16DCCB274	Nguyễn Thị Phương	nguyenphuong27798@gmail.com
+	B16DCCN151	Lê Thị Hoa	Lehoa98ptit@gmail.com
 
 2. Các chức năng chính – cách thức hoạt động
 •	Client - Thi trắc nghiệm: lấy đề thi từ server và làm trong 1 thời gian nhất định; trong thời gian làm bài người dùng không thể thoát khỏi màn hình ứng dụng cũng như không thể truy cập đến các ứng dụng khác. Nhận được kết quả sau khi thi
