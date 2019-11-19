@@ -58,10 +58,29 @@
   gửi các yêu cầu thực hiện đến *server* do chính máy client tạo ra. Lúc này thread commands sẽ kết nối đến *server* của máy client và 
   gửi các đoạn câu lệnh để máy client có thể biên dịch và thực hiện theo đúng yêu cầu.
   Với chức năng desktop thì sẽ tiến hành gọi đến giao diện **RemoteServerGui.java**
-  
-  
-  
+## 5.4 Package remote
+ - **RemoteServerGui.java**: chứa giao diện để hiển thị màn hình client
+ - **RemoteServerInit.java**: tiếp tục tạo 1 server socket dành riêng cho việc gửi nhận hình ảnh màn hình.
+ - **ClientHandler.java**: nhận các object là hỉnh ảnh màn hình đc gửi từ client lên
+ - **ClientCommandsSender.java**: gửi các sự kiện liên quan đến chuột xuống client.
+ 
   # 6. Chi tiết các package Client
+  ## 6.1 csmclient
+   - **Csmclient.java**: đọc thông tin từ file **ipserver.conf** đồng thời kết nối đến server socket đăng nhập và làm bài thi do 
+   **CsmCOnnection.java** phía server cung cấp.
+  ## 6.2 action
+  - **RecvConnectionFromServer.java**: khởi tạo 1 server của client phục vụ các yêu cầu từ phía **Commands.java** của server.
+  - **CommandFromServer.java**: nhận và giải mã các yêu cầu từ server và thực hiện như đăng nhập đăng xuất,...
+  - **SetTime.java**: thread dùng để đếm ngược thời gian làm bài.
+  ## 6.3 security
+  - **WindowsSecurity.java**: tạo ra thread ngăn chặn việc truy cập các ứng dụng khác trong khi làm bài thi
+  ## 6.4 remote
+  - **RemoteClientInit.java**: kết nối đến *server* thứ 2 của Server được tạo ra từ **RemoteServerInit.java** ở phía máy server.
+  - **ScreenSpyer.java**: gửi các ảnh màn hình theo dạng object đến server
+  - **ServerDelegate.java**: nhận các sự kiện chuột từ phía server và giả lập thực hiện các sự kiện đó thông qua Robot
+  ## 6.5 HienThi
+  - Chứa các giao diện liên quan đến việc làm bài thi
+  
   # 7. Hướng phát triển:
   - Về phía client sẽ xây dựng 1 danh sách các ứng dụng đi kèm được phép truy cập khi làm bài thi.
   - Xây dựng các tiêu chí cảnh báo đến server khi client cố tình thực hiện các hành vi không được phép
